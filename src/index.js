@@ -13,9 +13,15 @@ function handleConnection(conn){
     conn.on('error', onConnError);
 
     function onConnData(d) {
-        var j = JSON.parse(d);
-        console.log('connection data from %s: %j', remote, d);
+        try{
+            var j = JSON.parse(d);
+        }
+        catch(err){
+            console.log(err);
+        }
+        
         console.log(j);
+        
         conn.write(d);
     }
 
@@ -28,6 +34,6 @@ function handleConnection(conn){
     }
 }
 
-server.listen(3000, function(){
-    console.log("server listening on port 3000.");
+server.listen(8000, function(){
+    console.log("server listening on port 8000.");
 });
