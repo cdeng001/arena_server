@@ -1,5 +1,4 @@
 export default class Board{
-    
     constructor(){
         this.height = 100
         this.width = 100

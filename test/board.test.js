@@ -7,9 +7,9 @@ describe('board initialization', () => {
     it("should create an empty board", () => {
         const board = new Board();
         
-        expect(board.grid).to.be.a('array');
-        expect(board.player1).to.eq(undefined);
-        expect(board.player2).to.eq(undefined);
+        expect(board.grid).to.be.an('array').that.is.empty;
+        expect(board.player1).to.be.undefined;
+        expect(board.player2).to.be.undefined;
         expect(board.height).to.eq(100);
         expect(board.width).to.eq(100);
     })
