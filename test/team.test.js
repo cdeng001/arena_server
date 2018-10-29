@@ -8,15 +8,15 @@ const expect = chai.expect
 describe("team initialization", () => {
     const fullTeam = [
         new Unit(0),
-        new Unit(1),
-        new Unit(2),
-        new Unit(3),
-        new Unit(4),
+        new Unit(0),
+        new Unit(0),
+        new Unit(0),
+        new Unit(0),
     ]
     const notFullTeam = [
         new Unit(0),
-        new Unit(1),
-        new Unit(2),
+        new Unit(0),
+        new Unit(0),
     ]
     const nonUnitTeam = [
         {},{},{},{},{},
@@ -25,6 +25,7 @@ describe("team initialization", () => {
     it("should add units to the team", () => {
         const team = new Team(fullTeam)
 
+        expect(team).to.be.an.instanceof(Team)
         expect(team.max).to.eq(5)
         expect(team.units).to.eq(fullTeam)
     })

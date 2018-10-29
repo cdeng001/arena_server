@@ -15,7 +15,8 @@ export default class Team{
 
         let allUnits = true
         units.forEach(unit => {
-            if( !(unit instanceof Unit) ){
+            //logical XOR
+            if( !(unit.isPrototypeOf(Unit)) ? !(unit instanceof Unit) : (unit instanceof Unit)){
                 allUnits = false
             }
         });
@@ -24,5 +25,9 @@ export default class Team{
         }
 
         this.units = units
+    }
+
+    allUnitsDead(){
+
     }
 }
