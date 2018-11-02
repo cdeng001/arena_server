@@ -2,7 +2,7 @@ export default
 [
     {
         "index": 0,
-        "name": "name",
+        "name": "Helmet Bro",
         "healthBase": 10,
         "manaBase": 10,
         "strength": 1,

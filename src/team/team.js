@@ -28,6 +28,14 @@ export default class Team{
     }
 
     allUnitsDead(){
-
+        let allDead = true
+        for(let i=0; i<this.units.length; i++){
+            let unit = this.units[i]
+            if( !unit.isDead() ){
+                allDead = false
+                break
+            }
+        }
+        return allDead;
     }
 }

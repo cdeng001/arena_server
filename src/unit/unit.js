@@ -16,5 +16,16 @@ export default class Unit{
         this.intelligence = unitData.intelligence
         this.dexterity = unitData.dexterity
         this.movement = unitData.movement
+
+        this.currentHealth = this.healthBase
+        this.currentMana = this.manaBase
+        this.bonusStrength = 0
+        this.bonusIntelligence = 0
+        this.bonusDexterity = 0
+        this.bonusMovement = 0
+    }
+
+    isDead(){
+        return this.currentHealth <= 0
     }
 }
